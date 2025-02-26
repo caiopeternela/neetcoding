@@ -6,7 +6,7 @@ setupDirectories()
 const app = express()
 app.use(express.json())
 
-app.post("/process-video", async (req, res) => {
+app.post("/process-video", async (req, res): Promise<any> => {
   // get the bucket and filename from the cloud pub/sub message
   let data
   try {
