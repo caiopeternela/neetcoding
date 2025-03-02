@@ -4,7 +4,7 @@ import { getVideos } from './firebase/functions'
 import styles from './page.module.css'
 
 export default async function Home() {
-  const videos = await getVideos();
+  const videos = await getVideos()
 
   return (
     <main>
@@ -19,3 +19,5 @@ export default async function Home() {
     </main>
   )
 }
+
+export const revalidate = 30

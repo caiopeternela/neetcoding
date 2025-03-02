@@ -14,6 +14,7 @@ export interface Video {
 }
 
 export async function uploadVideo(file: File) {
+  /* eslint-disable @typescript-eslint/no-explicit-any */
   const response: any = await generateUploadUrlFunction({
     fileExtension: file.name.split(".").pop()
   })
